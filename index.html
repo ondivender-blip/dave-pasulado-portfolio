@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dave Pasulado | Virtual Assistant & Real Estate Operations Specialist</title>
+<meta name="description" content="Dave Pasulado — Virtual Assistant & Real Estate Operations Specialist supporting US real estate agents and teams.">
+
+<style>
+:root {
+  --navy:#11243a;
+  --teal:#0e887f;
+  --light:#f4f8f8;
+  --muted:#64748b;
+  --line:#e3eaed;
+}
+
+* { box-sizing:border-box; scroll-behavior:smooth; }
+
+body {
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  color:#1e293b;
+  line-height:1.6;
+}
+
+a { color:inherit; text-decoration:none; }
+
+.container {
+  max-width:1100px;
+  margin:auto;
+  padding:0 25px;
+}
+
+nav {
+  min-height:76px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo {
+  font-size:19px;
+  font-weight:800;
+  color:var(--navy);
+  letter-spacing:-.5px;
+}
+
+.logo span { color:var(--teal); }
+
+.nav-links {
+  display:flex;
+  gap:25px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.nav-links a:hover { color:var(--teal); }
+
+.button {
+  display:inline-block;
+  padding:13px 20px;
+  border-radius:7px;
+  background:var(--teal);
+  color:white;
+  font-size:13px;
+  font-weight:bold;
+  border:1px solid var(--teal);
+}
+
+.button.secondary {
+  background:white;
+  color:var(--navy);
+  border-color:#cbd5e1;
+}
+
+.hero {
+  background:linear-gradient(120deg,#f4f8fa,#edf7f5);
+}
+
+.hero-grid {
+  display:grid;
+  grid-template-columns:1.2fr .8fr;
+  align-items:center;
+  gap:50px;
+  padding:80px 0;
+}
+
+.eyebrow {
+  color:var(--teal);
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+
+h1 {
+  color:var(--navy);
+  font-size:clamp(40px,6vw,64px);
+  line-height:1.08;
+  letter-spacing:-2px;
+  margin:20px 0;
+}
+
+h2 {
+  color:var(--navy);
+  font-size:36px;
+  line-height:1.2;
+  margin:10px 0 15px;
+}
+
+.hero p {
+  max-width:560px;
+  font-size:16px;
+  color:var(--muted);
+}
+
+.hero-buttons {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
+}
+
+.photo {
+  max-width:330px;
+  margin:auto;
+}
+
+.photo-placeholder {
+  aspect-ratio:4/4.7;
+  border-radius:48% 48% 15px 15px;
+  background:linear-gradient(145deg,#d9e8e6,#b9d5d1);
+  border:8px solid white;
+  box-shadow:0 20px 55px rgba(17,36,58,.08);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.photo-placeholder svg {
+  width:80%;
+  height:85%;
+}
+
+.photo-caption {
+  text-align:center;
+  color:var(--muted);
+  font-size:11px;
+  margin-top:10px;
+}
+
+.trust {
+  border-bottom:1px solid #e8eef2;
+}
+
+.trust-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+  padding:22px 0;
+}
+
+.trust-item {
+  text-align:center;
+  color:var(--navy);
+  font-size:12px;
+  font-weight:bold;
+}
+
+.trust-item span {
+  color:var(--teal);
+  font-size:18px;
+  margin-right:7px;
+}
+
+section {
+  padding:80px 0;
+}
+
+.section-intro {
+  max-width:650px;
+  margin-bottom:35px;
+}
+
+.section-intro p,
+.card p,
+.step p,
+.about p,
+.tool-note {
+  color:var(--muted);
+  font-size:14px;
+}
+
+.cards {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.card {
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:26px;
+}
+
+.icon {
+  width:43px;
+  height:43px;
+  border-radius:10px;
+  background:var(--light);
+  color:var(--teal);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:20px;
+  margin-bottom:18px;
+}
+
+.card h3,
+.step h3,
+.tool-group h3 {
+  color:var(--navy);
+}
+
+.card h3 { font-size:17px; }
+
+.about,
+.tools {
+  background:#f8fafb;
+}
+
+.about-grid {
+  display:grid;
+  grid-template-columns:.85fr 1.15fr;
+  gap:55px;
+}
+
+.about-box {
+  background:var(--navy);
+  color:white;
+  padding:30px;
+  border-radius:13px;
+}
+
+.about-box h3 { color:white; }
+
+.about-box p { color:#cbd5e1; }
+
+.pills {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+
+.pill {
+  background:white;
+  color:#31545a;
+  border:1px solid #dce7e8;
+  border-radius:6px;
+  padding:7px 10px;
+  font-size:11px;
+  font-weight:bold;
+}
+
+.steps {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.step-number {
+  color:var(--teal);
+  font-size:12px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+.tools-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.tool-group {
+  background:white;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:23px;
+}
+
+.contact {
+  background:var(--navy);
+  color:white;
+}
+
+.contact h2 { color:white; }
+
+.contact p { color:#c4d0dd; }
+
+.contact-grid {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:center;
+}
+
+.contact-links {
+  display:grid;
+  gap:12px;
+}
+
+.contact-link {
+  display:flex;
+  gap:14px;
+  align-items:center;
+  padding:16px;
+  border:1px solid #35485c;
+  border-radius:9px;
+}
+
+.contact-icon {
+  color:#75d3c7;
+  font-size:19px;
+  min-width:25px;
+}
+
+.contact-label {
+  display:block;
+  color:#a8bacb;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.contact-value {
+  font-size:13px;
+  font-weight:bold;
+}
+
+footer {
+  background:#0b1929;
+  color:#9babbc;
+  font-size:11px;
+  padding:20px 0;
+}
+
+.footer-content {
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  flex-wrap:wrap;
+}
+
+@media(max-width:760px) {
+  .nav-links { display:none; }
+  .hero-grid,
+  .cards,
+  .trust-grid,
+  .about-grid,
+  .steps,
+  .tools-grid,
+  .contact-grid {
+    grid-template-columns:1fr;
+  }
+
+  .hero-grid {
+    padding:55px 0;
+  }
+
+  .photo {
+    max-width:230px;
+    order:-1;
+  }
+
+  section {
+    padding:60px 0;
+  }
+
+  h1 {
+    font-size:42px;
+  }
+
+  h2 {
+    font-size:30px;
+  }
+
+  .trust-item {
+    text-align:left;
+  }
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <a href="#home" class="logo">DAVE PASULADO<span>.</span></a>
+
+```
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#tools">Tools</a>
+    <a href="#contact">Contact</a>
+  </div>
+
+  <a href="#contact" class="button">Let's Connect ↗</a>
+</nav>
+```
+
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+```
+<div>
+  <div class="eyebrow">Virtual Support · Real Estate Operations</div>
+
+  <h1>
+    Helping real estate teams work
+    <span style="color:var(--teal)">smarter,</span>
+    one detail at a time.
+  </h1>
+
+  <p>
+    I'm Dave Pasulado, a Virtual Assistant & Real Estate Operations Specialist helping US real estate professionals stay organized, streamline workflows, and focus on growing their business.
+  </p>
+
+  <div class="hero-buttons">
+    <a href="#contact" class="button">Work With Me ↗</a>
+    <a href="#services" class="button secondary">Explore My Services</a>
+  </div>
+</div>
+
+<div class="photo">
+  <div class="photo-placeholder">
+    <svg viewBox="0 0 250 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="125" cy="92" r="53" fill="#8EAAA6"/>
+      <path d="M30 290C36 218 70 177 125 177C180 177 214 218 220 290" fill="#527E79"/>
+      <path d="M91 163L125 202L159 163" fill="#F4F7F6"/>
+      <path d="M105 175L125 202L145 175" fill="#D5E4E1"/>
+    </svg>
+  </div>
+  <div class="photo-caption">
+    Replace this placeholder with your professional photo
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<div class="trust">
+  <div class="container trust-grid">
+    <div class="trust-item"><span>✓</span> Detail-oriented operations support</div>
+    <div class="trust-item"><span>✓</span> Real estate workflow experience</div>
+    <div class="trust-item"><span>✓</span> Remote collaboration with US teams</div>
+  </div>
+</div>
+
+<section id="services">
+  <div class="container">
+
+```
+<div class="section-intro">
+  <div class="eyebrow">How I Can Help</div>
+  <h2>Reliable support behind a well-run business.</h2>
+  <p>
+    Practical, organized support that helps real estate agents and teams keep daily operations moving and deliver a smoother client experience.
+  </p>
+</div>
+
+<div class="cards">
+
+  <article class="card">
+    <div class="icon">▤</div>
+    <h3>Real Estate Listing Operations</h3>
+    <p>
+      Listing checklists, document coordination, disclosure tracking, MLS updates, media scheduling, compliance follow-up, and status monitoring.
+    </p>
+  </article>
+
+  <article class="card">
+    <div class="icon">◷</div>
+    <h3>Executive & Administrative Support</h3>
+    <p>
+      Calendar and task coordination, email follow-ups, CRM updates, reporting, research, data organization, and recurring administrative workflows.
+    </p>
+  </article>
+
+  <article class="card">
+    <div class="icon">◎</div>
+    <h3>VA Team & Workflow Support</h3>
+    <p>
+      Task delegation, process documentation, onboarding assistance, team coordination, training support, and workflow improvement.
+    </p>
+  </article>
+
+</div>
+```
+
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="container about-grid">
+
+```
+<div>
+  <div class="eyebrow">A Little About Me</div>
+  <h2>Organized, proactive, and focused on the details.</h2>
+
+  <p>
+    With 3–5 years of experience in virtual assistance and real estate operations, I support busy professionals by helping bring structure to complex, detail-heavy tasks.
+  </p>
+
+  <p>
+    My approach is simple: communicate clearly, keep tasks moving, document the details, and follow through. I value dependable support that helps clients spend more time on their priorities.
+  </p>
+
+  <div class="hero-buttons">
+    <a
+      href="https://www.linkedin.com/in/divender-jr-pasculado-5536b2258/"
+      target="_blank"
+      rel="noopener"
+      class="button"
+    >
+      Connect on LinkedIn ↗
+    </a>
+  </div>
+</div>
+
+<div class="about-box">
+  <h3>What you can expect</h3>
+
+  <p>
+    Professional communication, thoughtful organization, consistent follow-through, and a willingness to learn your processes and adapt to your team's needs.
+  </p>
+
+  <div class="pills">
+    <span class="pill">Listing Coordination</span>
+    <span class="pill">CRM Management</span>
+    <span class="pill">Documentation</span>
+    <span class="pill">Task Management</span>
+    <span class="pill">Team Support</span>
+    <span class="pill">Process Organization</span>
+  </div>
+</div>
+```
+
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+```
+<div class="section-intro">
+  <div class="eyebrow">My Approach</div>
+  <h2>Clear process. Consistent follow-through.</h2>
+  <p>
+    I aim to make collaboration straightforward, with clear priorities and organized workflows.
+  </p>
+</div>
+
+<div class="steps">
+
+  <div class="step">
+    <div class="step-number">01 / UNDERSTAND</div>
+    <h3>Learn your workflow</h3>
+    <p>
+      Understand your priorities, communication style, tools, and existing processes.
+    </p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">02 / ORGANIZE</div>
+    <h3>Build clarity</h3>
+    <p>
+      Keep tasks, deadlines, documents, and follow-ups organized so the next step is easy to identify.
+    </p>
+  </div>
+
+  <div class="step">
+    <div class="step-number">03 / EXECUTE</div>
+    <h3>Follow through</h3>
+    <p>
+      Complete assigned work carefully, communicate progress, and flag questions or issues promptly.
+    </p>
+  </div>
+
+</div>
+```
+
+  </div>
+</section>
+
+<section class="tools" id="tools">
+  <div class="container">
+
+```
+<div class="section-intro">
+  <div class="eyebrow">Technology & Platforms</div>
+  <h2>Tools I work with.</h2>
+  <p>
+    Experience across real estate systems, CRMs, productivity platforms, communication tools, and AI-assisted workflows.
+  </p>
+</div>
+
+<div class="tools-grid">
+
+  <div class="tool-group">
+    <h3>Real Estate & CRM</h3>
+    <div class="pills">
+      <span class="pill">Follow Up Boss</span>
+      <span class="pill">SkySlope</span>
+      <span class="pill">MLS</span>
+      <span class="pill">PropStream</span>
+      <span class="pill">REI Reply</span>
+      <span class="pill">HubSpot</span>
+      <span class="pill">Brivity</span>
+      <span class="pill">Zoho</span>
+      <span class="pill">Ylopo</span>
+      <span class="pill">BoldTrail</span>
+      <span class="pill">KW Core</span>
+    </div>
+  </div>
+
+  <div class="tool-group">
+    <h3>Productivity & Documents</h3>
+    <div class="pills">
+      <span class="pill">Microsoft Tools</span>
+      <span class="pill">Google Workspace</span>
+      <span class="pill">DocuSign</span>
+      <span class="pill">DigiSign</span>
+      <span class="pill">Trello</span>
+      <span class="pill">Asana</span>
+    </div>
+  </div>
+
+  <div class="tool-group">
+    <h3>Communication & Collaboration</h3>
+    <div class="pills">
+      <span class="pill">Slack</span>
+      <span class="pill">Dialpad</span>
+      <span class="pill">Vonage</span>
+      <span class="pill">RingCentral</span>
+    </div>
+  </div>
+
+  <div class="tool-group">
+    <h3>AI & Automation</h3>
+    <div class="pills">
+      <span class="pill">ChatGPT</span>
+      <span class="pill">Claude</span>
+      <span class="pill">Gemini</span>
+      <span class="pill">Zapier</span>
+    </div>
+  </div>
+
+</div>
+
+<p class="tool-note">
+  Tools are listed to reflect the platforms I work with. Specific experience can be discussed based on your team's needs.
+</p>
+```
+
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container contact-grid">
+
+```
+<div>
+  <div class="eyebrow" style="color:#75d3c7">Let's Work Together</div>
+
+  <h2>
+    Looking for dependable support for your real estate business?
+  </h2>
+
+  <p>
+    Let's talk about your workload, workflows, and the areas where an extra set of hands can help.
+  </p>
+
+  <div class="hero-buttons">
+    <a
+      href="mailto:On.divender@gmail.com?subject=Virtual%20Assistant%20Inquiry"
+      class="button"
+      style="background:#75d3c7;border-color:#75d3c7;color:#102b37"
+    >
+      Email Me ↗
+    </a>
+
+    <a
+      href="https://www.linkedin.com/in/divender-jr-pasculado-5536b2258/"
+      target="_blank"
+      rel="noopener"
+      class="button secondary"
+      style="background:transparent;color:white;border-color:#536579"
+    >
+      LinkedIn Profile ↗
+    </a>
+  </div>
+</div>
+
+<div class="contact-links">
+
+  <a class="contact-link" href="mailto:On.divender@gmail.com">
+    <span class="contact-icon">✉</span>
+    <span>
+      <span class="contact-label">Email</span>
+      <span class="contact-value">On.divender@gmail.com</span>
+    </span>
+  </a>
+
+  <a class="contact-link" href="tel:+639930197094">
+    <span class="contact-icon">☎</span>
+    <span>
+      <span class="contact-label">Phone</span>
+      <span class="contact-value">+63 993 019 7094</span>
+    </span>
+  </a>
+
+  <a
+    class="contact-link"
+    href="https://www.linkedin.com/in/divender-jr-pasculado-5536b2258/"
+    target="_blank"
+    rel="noopener"
+  >
+    <span class="contact-icon">in</span>
+    <span>
+      <span class="contact-label">LinkedIn</span>
+      <span class="contact-value">View my professional profile ↗</span>
+    </span>
+  </a>
+
+</div>
+```
+
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <span>© <span id="year"></span> Dave Pasulado. All rights reserved.</span>
+    <span>Virtual Assistant & Real Estate Operations Specialist</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
